@@ -1,5 +1,6 @@
 # Stack
 
+```
 Stack<T> stack = new Stack<>();
 
 stack.push(T);   //Push the element into the stack
@@ -16,3 +17,4 @@ void push(e);
 return pop();
 peek(); //top
 isEmpty()
+```

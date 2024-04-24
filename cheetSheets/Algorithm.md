@@ -1,17 +1,29 @@
-# Boyer-Moore Majority Voting Algorithm
+# Algorithms
 
-## Given an array unsorted, find the element with maximum occurances in an array
+### Searching
+1. Linear search
+2. Binary search
+3. Hashing (Key, Value) search
 
-Note: 
-1. The max element should occur more than n/2 times. That is: 
-[3,2,3,4] cannot find the max element. 
-[3,2,3,4,3] can find the max element as 3 occurs more than n/2 times
 
-2. So, 
-    majorty element = minority element - 1; //mojority element will alwyas be more than 50%
-The majority element is the element that appears more than (not equals to either) ⌊n / 2⌋ times.
 
-So, 
+## Boyer-Moore Majority Voting Algorithm
+
+### Given an array unsorted, find the element with maximum occurrences in an array
+
+Note:
+1. The max element should occur more than n/2 times. That is:
+   [3,2,3,4] cannot find the max element.
+   [3,2,3,4,3] can find the max element as 3 occurs more than n/2 times
+
+2. So,
+   majority element = minority element - 1; //majority element will always be more than 50%
+   The majority element is the element that appears more than (not equals to either) ⌊n / 2⌋ times.
+
+So,
+```
+int element = 0;
+int counter = 0;
 nums[]={3,2,3,3,3,3,1}
 for(int n: nums){
     if(counter == 0){
@@ -23,7 +35,9 @@ for(int n: nums){
         counter--;
     }
 }
+```
 
+```
 class Solution {
     public List<Integer> majorityElement(int[] nums) {
         int count1 = 0;
@@ -67,3 +81,4 @@ class Solution {
         return list;
     }
 }
+```
